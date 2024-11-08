@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1031627655426",
+    "project_id": "teachease-bda54",
+    "storage_bucket": "teachease-bda54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031627655426:android:e17a993016400a6794da1b",
+        "android_client_info": {
+          "package_name": "com.example.teachease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-3ViWcFrQBk0NWKXkRL7ZTW3Ty5J5TEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
