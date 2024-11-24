@@ -80,36 +80,21 @@ fun CreateProfileScreen(navController: NavHostController) {
             shape = RoundedCornerShape(12.dp)
         )
 
-        // Date of Birth Input using DatePickerDialog
+        // Date of Birth Input as a regular editable TextField
         TextField(
             value = dob,
-            onValueChange = { /* no manual input needed */ },
+            onValueChange = { dob = it },  // Allow manual input
             label = { Text("Date of Birth") },
-            readOnly = true,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 16.dp)
-                .clickable {
-                    // Show the DatePickerDialog when clicked
-                    DatePickerDialog(
-                        context,
-                        { _, year, month, dayOfMonth ->
-                            // Format the date and set it in the TextField
-                            val dateFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
-                            calendar.set(year, month, dayOfMonth)
-                            dob = dateFormat.format(calendar.time)
-                        },
-                        calendar.get(Calendar.YEAR),
-                        calendar.get(Calendar.MONTH),
-                        calendar.get(Calendar.DAY_OF_MONTH)
-                    ).show()
-                },
+                .padding(bottom = 16.dp),
             colors = TextFieldDefaults.textFieldColors(
                 focusedIndicatorColor = Color.Gray,
                 unfocusedIndicatorColor = Color.LightGray
             ),
             shape = RoundedCornerShape(12.dp)
         )
+
 
         Box(
             modifier = Modifier

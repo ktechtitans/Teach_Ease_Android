@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1031627655426",
-    "project_id": "teachease-bda54",
-    "storage_bucket": "teachease-bda54.appspot.com"
+    "project_number": "675046374669",
+    "project_id": "teacheaseandroid",
+    "storage_bucket": "teacheaseandroid.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1031627655426:android:e17a993016400a6794da1b",
+        "mobilesdk_app_id": "1:675046374669:android:030165b175e123f4eb4444",
         "android_client_info": {
           "package_name": "com.example.teachease"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB-3ViWcFrQBk0NWKXkRL7ZTW3Ty5J5TEw"
+          "current_key": "AIzaSyAXLnA-HUj3-k4XFylz6mVKJJRId1p53TM"
         }
       ],
       "services": {

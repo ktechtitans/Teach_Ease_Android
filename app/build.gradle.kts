@@ -52,7 +52,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("androidx.compose.material3:material3:1.0.0")
     implementation("androidx.navigation:navigation-compose:2.5.3")
-    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore-ktx")
