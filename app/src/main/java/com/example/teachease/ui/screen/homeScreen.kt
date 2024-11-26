@@ -130,42 +130,42 @@ fun HomeScreen(navController: NavHostController) {
                 }
             }
 
-            // Static Image Card (Featured Course)
-            item {
-                Card(
-                    shape = RoundedCornerShape(16.dp),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(180.dp)
-                        .padding(bottom = 16.dp),
-                    elevation = CardDefaults.cardElevation(8.dp)
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.ic_menu_camera),  // Placeholder image
-                        contentDescription = "Featured Course",
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
-                    )
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.Bottom
-                    ) {
-                        Text(
-                            text = "Swift Programming",
-                            fontSize = 22.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color.White
-                        )
-                        Text(
-                            text = "Master iOS development with Swift.",
-                            fontSize = 14.sp,
-                            color = Color.White
-                        )
-                    }
-                }
-            }
+//            // Static Image Card (Featured Course)
+//            item {
+//                Card(
+//                    shape = RoundedCornerShape(16.dp),
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .height(180.dp)
+//                        .padding(bottom = 16.dp),
+//                    elevation = CardDefaults.cardElevation(8.dp)
+//                ) {
+//                    Image(
+//                        painter = painterResource(id = R.drawable.ic_menu_camera),  // Placeholder image
+//                        contentDescription = "Featured Course",
+//                        contentScale = ContentScale.Crop,
+//                        modifier = Modifier.fillMaxSize()
+//                    )
+//                    Column(
+//                        modifier = Modifier
+//                            .fillMaxSize()
+//                            .padding(16.dp),
+//                        verticalArrangement = Arrangement.Bottom
+//                    ) {
+//                        Text(
+//                            text = "Swift Programming",
+//                            fontSize = 22.sp,
+//                            fontWeight = FontWeight.Bold,
+//                            color = Color.White
+//                        )
+//                        Text(
+//                            text = "Master iOS development with Swift.",
+//                            fontSize = 14.sp,
+//                            color = Color.White
+//                        )
+//                    }
+//                }
+//            }
 
 
 
