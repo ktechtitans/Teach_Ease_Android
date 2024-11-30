@@ -8,10 +8,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -57,6 +57,12 @@ fun ProfileScreen(navController: NavHostController) {
         }
     }
 
+    // Sign-out function
+    fun signOut() {
+        Firebase.auth.signOut()
+        navController.popBackStack()  // Navigate back to the login screen
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -89,27 +95,61 @@ fun ProfileScreen(navController: NavHostController) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Top
             ) {
-                Text(
-                    text = "Username: $username",
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(bottom = 16.dp)
+                // Add Spacer to create space from the top
+                Spacer(modifier = Modifier.height(32.dp))  // Adds space above the first TextField
+
+                // Username TextField
+                TextField(
+                    value = username,
+                    onValueChange = {},
+                    label = { Text("Username") },
+                    modifier = Modifier.fillMaxWidth(),
+                    enabled = false,
+                    textStyle = TextStyle(color = Color.Black) // Text color set to black
                 )
-                Text(
-                    text = "Date of Birth: $dob",
-                    fontSize = 18.sp,
-                    modifier = Modifier.padding(bottom = 16.dp)
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Date of Birth TextField
+                TextField(
+                    value = dob,
+                    onValueChange = {},
+                    label = { Text("Date of Birth") },
+                    modifier = Modifier.fillMaxWidth(),
+                    enabled = false,
+                    textStyle = TextStyle(color = Color.Black) // Text color set to black
                 )
-                Text(
-                    text = "Languages: $languages",
-                    fontSize = 18.sp,
-                    modifier = Modifier.padding(bottom = 16.dp)
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Languages TextField
+                TextField(
+                    value = languages,
+                    onValueChange = {},
+                    label = { Text("Languages") },
+                    modifier = Modifier.fillMaxWidth(),
+                    enabled = false,
+                    textStyle = TextStyle(color = Color.Black) // Text color set to black
                 )
-                Text(
-                    text = "Bio: $bio",
-                    fontSize = 18.sp,
-                    modifier = Modifier.padding(bottom = 16.dp)
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Bio TextField
+                TextField(
+                    value = bio,
+                    onValueChange = {},
+                    label = { Text("Bio") },
+                    modifier = Modifier.fillMaxWidth(),
+                    enabled = false,
+                    textStyle = TextStyle(color = Color.Black) // Text color set to black
                 )
+                Spacer(modifier = Modifier.height(80.dp))
+
+                // Sign-out Button with custom color
+                Button(
+                    onClick = { signOut() },
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.Blue) // Corrected background color for Material3
+                ) {
+                    Text("Sign Out", color = Color.White) // Button text color set to white
+                }
             }
         }
     }
