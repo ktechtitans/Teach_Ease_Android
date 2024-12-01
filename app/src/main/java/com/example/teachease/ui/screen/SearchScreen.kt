@@ -87,7 +87,13 @@ fun SearchScreen(navController: NavHostController) {
                                             .get()
                                             .await()
                                             .documents.mapNotNull { doc ->
-                                                doc.toObject(Course::class.java)
+                                                val course = doc.toObject(Course::class.java)
+                                                // Filter out non-relevant results based on course name
+                                                if (course != null && course.courseName.contains(searchQuery, ignoreCase = true)) {
+                                                    course
+                                                } else {
+                                                    null
+                                                }
                                             }
                                     }
                                     courses.addAll(searchResults)
@@ -126,6 +132,7 @@ fun SearchScreen(navController: NavHostController) {
         }
     }
 }
+
 @Composable
 fun CourseCard(course: Course, navController: NavHostController) {
     Card(
@@ -153,6 +160,7 @@ fun CourseCard(course: Course, navController: NavHostController) {
         }
     }
 }
+
 
 
 
