@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.app.teachease"
+    namespace = "com.example.teachease"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.app.teachease"
+        applicationId = "com.example.teachease"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -56,7 +56,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore-ktx")
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-compose:2.4.0") // Check for the latest version
 
 
     testImplementation(libs.junit)
